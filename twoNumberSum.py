@@ -36,3 +36,18 @@ def twoNumberSum(array, targetSum):
     return []
 
 # print(twoNumberSum([3,5,-4,8,11,1,-1,6], 10))
+
+def twoNumberSum(array, targetSum):
+    array.sort()
+    i = 0
+    j = len(array) - 1
+    while i < j:
+        if array[i] + array[j] == targetSum:
+            return sorted([array[i], array[j]])
+        if array[i] + array[j] > targetSum:
+            array[j] -= 1
+        if array[i] + array[j] < targetSum:
+            array[i]+= 1
+    return []
+
+print(twoNumberSum([3,5,-4,8,11,1,-1,6], 4))
