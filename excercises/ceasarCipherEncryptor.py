@@ -40,15 +40,34 @@
 
 
 
+# def caesarCipherEncryptor(string, key):
+#     newLetters = []
+#     newKey = key % 26 # the remainder basically the wrap around after z
+#     for letter in string: 
+#         newLetters.append(getNewLetter(letter, newKey))
+#     return "".join(newLetters)
+
+# def getNewLetter(letter, key):
+#     newLetterCode = ord(letter) + key 
+#     return chr(newLetterCode) if newLetterCode <= 122 else chr(96 + newLetterCode % 122) # remainder to account for wrapping around the Z
+
+# print(caesarCipherEncryptor("xyz", 2))
+
+
+
+
 def caesarCipherEncryptor(string, key):
-    newLetters = []
-    newKey = key % 26 # the remainder basically the wrap around after z
-    for letter in string: 
-        newLetters.append(getNewLetter(letter, newKey))
-    return "".join(newLetters)
+    newString = ""
+    newKey = key % 26
+
+    for i in string:
+        newString += getNewLetter(i, newKey)
+    return newString
 
 def getNewLetter(letter, key):
-    newLetterCode = ord(letter) + key 
-    return chr(newLetterCode) if newLetterCode <= 122 else chr(96 + newLetterCode % 122) # remainder to account for wrapping around the Z
+    newLetterCode = ord(letter) + key
+    return chr(newLetterCode) if newLetterCode <= 122 else chr(96 + newLetterCode % 122)
 
-print(caesarCipherEncryptor("xyz", 2))
+print(caesarCipherEncryptor("abc", 2))
+
+

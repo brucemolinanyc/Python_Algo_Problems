@@ -102,16 +102,31 @@ def binarySearch(arr, target):
 def binarySearch(arr, target):
     return binarySearchHelper( arr, target, 0, len(arr)-1 )
 
-def binarySearchHelper(arr,target, left,right):
-    middle = (left + right) // 2 
-    possibleTarget = arr[middle]
+# def binarySearchHelper(arr,target, left,right):
+#     middle = (left + right) // 2 
+#     possibleTarget = arr[middle]
+#     while left <= right:
+#         if possibleTarget == target:
+#             return middle 
+#         if possibleTarget > target:
+#             return binarySearchHelper(arr, target, left, middle - 1)
+#         if possibleTarget < target:
+#             return binarySearchHelper(arr, target, middle + 1, right)
+#     return -1
+
+
+def binarySearch(arr,item):
+    left = 0 
+    right = len(arr)-1
     while left <= right:
-        if possibleTarget == target:
+        middle = (left + right) // 2
+        potentialTarget = arr[middle]
+        if potentialTarget == item:
             return middle 
-        if possibleTarget > target:
-            return binarySearchHelper(arr, target, left, middle - 1)
-        if possibleTarget < target:
-            return binarySearchHelper(arr, target, middle + 1, right)
+        if potentialTarget < item:
+            left = middle + 1
+        if potentialTarget > item:
+            right = middle- 1
     return -1
 
 my_list = [1, 3, 5, 7, 9,10,11,12,13,23,55,66,77]
