@@ -1,5 +1,5 @@
 """ 
-Loop backwards through an array to sort the array
+Loop backwards through an array to sort 
 """
 
 def insertionSort(arr):
