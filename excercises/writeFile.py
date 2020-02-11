@@ -9,6 +9,5 @@ def writeFile():
         open_file.write('this is my string')
 
 
-# if __name__ == "main":
-
-writeFile()
+if __name__ == "__main__":
+    writeFile()
