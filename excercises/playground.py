@@ -78,6 +78,9 @@ def balancedStringSplit(string):
 # print(balancedStringSplit('RLRRLLRLRL'))
 
 
+def nameBackwards(fname, lname):
+    return f'{fname[::-1]}{lname}[::-1]}'
+
 
 class Person:
     def __init__(self, fname, lname):
