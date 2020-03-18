@@ -1,3 +1,5 @@
+#https://www.w3resource.com/python-exercises/
+
 def twinkle():
     print("Twinkle, twinkle little star")
     print("     How I wonder what you are!")
@@ -26,4 +28,34 @@ def datetime():
 
 # datetime()
 
+#Write a Python program which accepts the radius of a circle from the user and compute the area.
+def circle_area(radius):
+    print( round(( (radius**2) * 3.14),1) )
+
+# circle_area(1.1)
+
+
+#Write a Python program which accepts the user's first and last name and print them in reverse order with a space between them
+def name_backwards():
+    first = input("Please enter your first name: ")
+    last = input("Please enter your last name: ")
+    print(f'Your name backwards is {first[::-1]} {last[::-1]}')
+    print(f'Your name reversed is {last} {first}')
+
+# name_backwards()
+
+
+#Write a Python program which accepts a sequence of comma-separated numbers from user and generate a list and a tuple with those numbers.
+def number_format():
+    values = input("enter some values: ")
+    my_list = values.split(",")
+    my_tuple = (values)
+
+    print(f'List: {my_list}')
+    print(f'Tuple {my_tuple}')
+
+
+# number_format()
+
+#Write a Python program to accept a filename from the user and print the extension of that.
 
