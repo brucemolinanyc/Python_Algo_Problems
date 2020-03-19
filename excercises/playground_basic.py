@@ -103,4 +103,50 @@ def date_difference(tup, tup2):
     days = tup2[2] - tup[2]
     print(f'{days} days')
 
-date_difference((2014,7,2), (2014,7,11))
+# Write a Python program to get the volume of a sphere with a given radius 
+def volume():
+    radius = input('give me the radius of a sphere to get the volume: ')
+    while radius.isdigit() == False:
+        print('Please enter a number only')
+        radius = input('Enter a radius: ')
+    pi = 3.14
+    print(f'The volume of the sphere is {round((4/3) * pi * (int(radius)**3),2)}')
+
+# volume()
+
+#Write a Python program to get the difference between a given number and 17, if the number is greater than 17 return double the absolute difference.
+def subtract_17():
+    result = None 
+    number = input('Give me a digit to subtract 17 from: ')
+    if int(number) < 17:
+        result = abs(int(number) - 17) * 2 
+        print(f'your number was less than 17 so the absolute value multipled by 2 is {result}')
+    else:
+        result = int(number) - 17
+        print(f'Your number {number} minus 17 is equal to {result}')
+    print('thanks!')
+
+# subtract_17()
+
+#Write a Python program to test whether a number is within 100 of 1000 or 2000.
+
+def difference():
+    number = input("give me a number and i'll test if its within 100 of 1000 or 2000: " )
+    diff_100 = abs(int(number) - 1000)
+    diff_200 = abs(int(number) - 2000)
+    result_a = False 
+    result_b = False 
+    if diff_100 <= 100:
+        result_a = True 
+    if diff_200 <= 100:
+        result_b = True 
+    
+    if result_a:
+        print("Your number is 100 away from 1000")
+    elif result_b:
+        print("Your number is 100 away from 2000")
+    else:
+        print("Your number is not 100 away from either 1000 or 2000")
+
+
+difference()
