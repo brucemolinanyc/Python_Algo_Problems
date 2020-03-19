@@ -96,4 +96,11 @@ def value_addition():
     result = int(num) + int(num2) + int(num3)
     print(f"The result of {num1} + {num2} + {num3} is {result}")
 
-value_addition()
+# value_addition()
+
+#  Write a Python program to calculate number of days between two dates.
+def date_difference(tup, tup2):
+    days = tup2[2] - tup[2]
+    print(f'{days} days')
+
+date_difference((2014,7,2), (2014,7,11))
